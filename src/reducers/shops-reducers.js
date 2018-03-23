@@ -2,7 +2,8 @@ import { SET_SHOPS_DATA } from "../actions/shops-actions";
 
 //Shops Reducer 
 
-const defaultrdShops = {shops: {}};
+const defaultrdShops = {shops:[]};
+
 export function rdShops(state = defaultrdShops, action)
 {
     switch (action.type)
