@@ -1,7 +1,14 @@
 
 export const SET_SHOPS_DATA = 'SET_SHOPS_DATA';
+export const GET_SHOPS_DATA = 'GET_SHOPS_DATA';
 export const ADD_TO_FAVORITE = 'ADD_TO_FAVORITE';
 
+export function getShopsData()
+{
+	return {
+		type: GET_SHOPS_DATA
+	}
+}
 export function setShopsData(data)
 {
 	return{
