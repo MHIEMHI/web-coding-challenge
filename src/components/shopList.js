@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getShopsData } from '../actions/shops-actions';
+import ShopItem from './shopItem';
+
 
 import {Grid, Col, Row, Button} from 'react-bootstrap';
 
@@ -18,12 +20,10 @@ class ShopList extends React.Component
 		var shopsList = this.props.rdShops.shops.map(shop =>
 		{
 			return (
-				<div key={shop.id}>
-					<h2>{shop.name}</h2>
-					<h2>{shop.location}</h2>
-					<Button bsStyle='primary'>Favorite</Button>
-				</div>
-			)
+				<Col xs={12} sm={6} md={4} key={shop.id}>
+					<ShopItem shop={shop}/>
+				</Col>
+			);
 		});
 		return (
 			<Grid>
