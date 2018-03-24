@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getShopsData } from '../actions/shops-actions';
 import ShopItem from './shopItem';
+import ShopForm from './shopForm';
 
 
-import {Grid, Col, Row, Button} from 'react-bootstrap';
+import { Grid, Col, Row, Button } from 'react-bootstrap';
 
 class ShopList extends React.Component
 {
@@ -21,13 +22,17 @@ class ShopList extends React.Component
 		{
 			return (
 				<Col xs={12} sm={6} md={4} key={shop.id}>
-					<ShopItem shop={shop}/>
+					<ShopItem shop={shop} />
 				</Col>
 			);
 		});
+
 		return (
 			<Grid>
 				<Row>
+					<Col xs={12} sm={6}>
+						<ShopForm />
+					</Col>
 					{shopsList}
 				</Row>
 			</Grid>
@@ -42,6 +47,6 @@ function mapStateToProps(state)
 }
 function mapDispatchToProps(dispatch)
 {
-	return bindActionCreators({getShopsData}, dispatch);
+	return bindActionCreators({ getShopsData }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ShopList);
