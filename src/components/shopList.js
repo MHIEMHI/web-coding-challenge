@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { getShopsData } from '../actions/shops-actions';
 import ShopItem from './shopItem';
 import ShopForm from './shopForm';
+import Favorite from './favorite';
 
 
 import { Grid, Col, Row, Button } from 'react-bootstrap';
@@ -30,6 +31,9 @@ class ShopList extends React.Component
 		return (
 			<Grid>
 				<Row>
+					<Favorite />
+				</Row>
+				<Row>
 					<Col xs={12} sm={6}>
 						<ShopForm />
 					</Col>
@@ -41,9 +45,7 @@ class ShopList extends React.Component
 }
 function mapStateToProps(state)
 {
-	return {
-		rdShops: state.rdShops
-	};
+	return state;
 }
 function mapDispatchToProps(dispatch)
 {
