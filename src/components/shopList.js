@@ -22,7 +22,7 @@ class ShopList extends React.Component
 		var shopsList = this.props.rdShops.shops.map(shop =>
 		{
 			return (
-				<Col xs={12} sm={6} md={4} key={shop.id}>
+				<Col xs={12} sm={6} md={4} key={shop._id}>
 					<ShopItem shop={shop} />
 				</Col>
 			);

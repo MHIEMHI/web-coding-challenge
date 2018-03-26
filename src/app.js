@@ -27,4 +27,4 @@ render(
     </Provider>
     , document.getElementById('app')
 )
-store.dispatch(setShopsData({ shops: [{ id: 1, name: 'test', location: 'Rabat', coordinate:'00' }, { id: 2, name: 'test2', location: 'Casa', coordinate:'01' }] }));
+store.dispatch(setShopsData({ shops: [{ _id: 1, name: 'test', location: 'Rabat', coordinate:'00' }, { _id: 2, name: 'test2', location: 'Casa', coordinate:'01' }] }));
